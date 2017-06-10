@@ -1,23 +1,38 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
+import { Constants, Facebook } from 'expo';
+import Login from './src/screens/login';
+
 
 export default class App extends React.Component {
+
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Oi Gurias!!!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Login/>
+           
       </View>
+      
     );
+  }
+
+  clicme = () => {
+    Alert.alert('teste')
   }
 }
 
+
+
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    paddingTop: Constants.statusBarHeight,
+    
+  }
+ 
 });
