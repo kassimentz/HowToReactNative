@@ -31,13 +31,14 @@ export default class Login extends React.Component {
                     source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}}
                     style={styles.image}
                 />
+                <View style={styles.formWraper}>
+                  <InputText placeholder='Nome'/>
 
-                <InputText placeholder='Nome'/>
+                  <InputText placeholder='Email'/>
 
-                <InputText placeholder='Email'/>
+                  <InputText placeholder='Senha'/>
+                </View>
 
-                <InputText placeholder='Senha'/>
-                
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>
                 </View>
@@ -74,6 +75,10 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     alignSelf: 'center',
     
+  },
+  formWraper: {
+    marginBottom: 40,
+    marginTop: 10,
   },
   btnFacebook: {
     alignItems: 'center',
