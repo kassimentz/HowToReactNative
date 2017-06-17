@@ -4,6 +4,7 @@ import { Constants, Facebook } from 'expo';
 import Login from './src/screens/login';
 import Cadastro from './src/screens/cadastro';
 import EsqueciSenha from './src/screens/esqueciSenha';
+import NovoPasso from './src/screens/novoPasso';
 
 
 export default class App extends React.Component {
@@ -14,7 +15,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {/*<Login/>*/}
         {/*<Cadastro/>*/}
-        <EsqueciSenha/>
+        {/*<EsqueciSenha/>*/}
+        <NovoPasso/>
            
       </View>
       
