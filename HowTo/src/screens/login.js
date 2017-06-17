@@ -50,7 +50,7 @@ export default class Login extends React.Component {
                   <InputText placeholder='Senha'/>
                 </View>
 
-                <Text onPress={() => dispatch(resetAction)}>Login</Text>
+                <Text style={styles.btnText}  onPress={() => dispatch(resetAction)}>Login</Text>
 
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>
@@ -101,7 +101,10 @@ const styles = StyleSheet.create({
   btnText: {
     color: 'blue',
     fontSize: 16,
-    
+    alignItems: 'center',
+    padding: 10,
+    alignSelf: 'center',
+
   },
 
   btnFacebook: {
