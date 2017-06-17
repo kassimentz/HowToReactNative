@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
-import { Constants, Facebook } from 'expo';
+import { Constants, Video} from 'expo';
 import MultilineText from '../components/MultilineText';
 
 export default class NovoPasso extends React.Component {
@@ -12,7 +12,16 @@ export default class NovoPasso extends React.Component {
           
                 <View style={styles.formWraper}>
                     {/*trocar por video*/}
-                    <Image source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}} style={styles.image}/>
+                    {/*<Image source={{uri:'https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif'}} style={styles.image}/>*/}
+                    <Video 
+                        style={styles.video}
+                        source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                        rate={1.0}
+                        volume={1.0}
+                        muted={false}
+                        resizeMode="cover"
+                        repeat
+                        />
                     <Text style={styles.texto}>Descrição do Passo</Text>
                     <MultilineText/>
 
@@ -52,9 +61,9 @@ const styles = StyleSheet.create({
     margin: 40,
 
   },
-image: {
-    height: 200,
-    width: 200,
+video: {
+    height: 300,
+    width: 300,
     marginBottom: 30,
     alignSelf: 'center',
     
