@@ -6,6 +6,7 @@ import NovoPasso from './screens/novoPasso';
 import PassoDetalhe from './screens/passoDetalhe';
 import Cadastro from './screens/cadastro';
 import ListaTutoriais from './screens/listaTutoriais';
+import TutorialDetalhe from './screens/tutorialDetalhe';
 
 const Tabs = TabNavigator({
   Tutoriais: {

@@ -5,7 +5,9 @@ import { Constants, Video} from 'expo';
 const deviceWidth = Dimensions.get("window").width;
 
 export default class TutorialDetalhe extends React.Component {
-
+static navigationOptions = {
+    title: 'Tutorial',
+  };
 
     render() {
     return (
