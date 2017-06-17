@@ -38,11 +38,6 @@ export default class Login extends React.Component {
 
                 <InputText placeholder='Senha'/>
                 
-                <Button
-                    title='Login'
-                    onPress={this.handleLogin}
-                />  
-
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>
                 </View>
