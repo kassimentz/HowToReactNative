@@ -24,13 +24,11 @@ export default class Login extends React.Component {
 
   render() {
     return (
-        <View>
+        <View style={styles.container}>
             <View style={styles.body}>
           
-                <Image
-                    source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}}
-                    style={styles.image}
-                />
+                <Image source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}} style={styles.image}/>
+
                 <View style={styles.formWraper}>
                   <InputText placeholder='Nome'/>
 
@@ -51,15 +49,8 @@ export default class Login extends React.Component {
 
             <View style={styles.footer}>
                 
-                <Button
-                    title="Não sou Cadastrado"
-                    onPress={this._handleButtonPress}
-                />
-            
-                <Button
-                    title="Esqueci Senha"
-                    onPress={this._handleButtonPress}
-                />
+                <Button title="Não sou Cadastrado" onPress={this._handleButtonPress} />
+                <Button title="Esqueci Senha" onPress={this._handleButtonPress} />
             
             </View> 
         </View>
@@ -69,6 +60,16 @@ export default class Login extends React.Component {
 }
 
 const styles = StyleSheet.create({
+
+  container: {
+    flex:1,
+  },
+  body: {
+    marginTop: 40,
+    marginBottom: 40,
+    flex:1,
+  },
+ 
   image: {
     height: 200,
     width: 200,
@@ -76,10 +77,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     
   },
+
   formWraper: {
-    marginBottom: 40,
-    marginTop: 10,
+    margin: 40,
+
   },
+
   btnFacebook: {
     alignItems: 'center',
     backgroundColor: '#2A49A5',
@@ -90,6 +93,7 @@ const styles = StyleSheet.create({
     padding: 10,
     alignSelf: 'center',
   },
+
   btnGoogle: {
     alignItems: 'center',
     backgroundColor: '#EA4335',
@@ -100,24 +104,19 @@ const styles = StyleSheet.create({
     padding: 10,
     alignSelf: 'center',
   },
+
   title: {
     color: '#fff',
     fontSize: 22,
     fontWeight: 'bold',
 
   },
-  footer: {
-   alignItems: 'center',
-   justifyContent: 'center',
-   flexDirection:'row',
-   
- },
-  body: {
-    flex:1,
-    justifyContent: 'center',
-  },
- 
 
+  footer: {
+   alignItems: 'baseline',
+   justifyContent: 'space-between',
+   flexDirection:'row',
+ },
 
 });
 
