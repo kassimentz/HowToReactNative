@@ -34,6 +34,7 @@ export default class Login extends React.Component {
    );
   }
 
+
   render() {
     const { dispatch } = this.props.navigation;
     return (
@@ -49,7 +50,7 @@ export default class Login extends React.Component {
                   <InputText placeholder='Senha'/>
                 </View>
 
-                <Button title="Login" onPress={() => dispatch(resetAction)} />
+                <Text onPress={() => dispatch(resetAction)}>Login</Text>
 
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>
@@ -93,8 +94,14 @@ const styles = StyleSheet.create({
   },
 
   formWraper: {
-    margin: 40,
+    margin: 20,
 
+  },
+
+  btnText: {
+    color: 'blue',
+    fontSize: 16,
+    
   },
 
   btnFacebook: {
