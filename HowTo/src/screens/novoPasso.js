@@ -2,8 +2,13 @@ import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
 import { Constants, Video} from 'expo';
 import MultilineText from '../components/MultilineText';
+import { TabNavigator } from "react-navigation";
 
 export default class NovoPasso extends React.Component {
+
+static navigationOptions = {
+    title: 'NovoPasso',
+  };
 
     render() {
     return (

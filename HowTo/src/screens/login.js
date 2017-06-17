@@ -3,6 +3,7 @@ import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
 import { Constants, Facebook } from 'expo';
 import { StackNavigator } from 'react-navigation';
 import InputText from '../components/InputText';
+import { TabNavigator } from "react-navigation";
 
 
 export default class Login extends React.Component {
