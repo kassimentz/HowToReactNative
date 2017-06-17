@@ -36,4 +36,5 @@ export default StackNavigator({
   Login: { screen: Login },
   Tutoriais: { screen: Tabs },
   Cadastro: { screen: Cadastro },
+  Tutorial: { screen: TutorialDetalhe },
 });

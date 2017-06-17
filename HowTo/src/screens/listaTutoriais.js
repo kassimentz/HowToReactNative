@@ -39,14 +39,13 @@ handleLogin = () => {
             
                   <View style={styles.formWraper}>
                       <Search placeholder='Pesquisa'/>  
-                      {/*<Button title="Ver Passo" onPress={() => navigate('Cadastro')} />*/}
                   </View>  
 
                   <View style={styles.line}>
                     <ThumbTutorial navigate={navigate} conteudo={'1'}/>
-                    <ThumbTutorial/>
-                    <ThumbTutorial/>
-                    <ThumbTutorial/>
+                    <ThumbTutorial navigate={navigate} conteudo={'1'}/>
+                    <ThumbTutorial navigate={navigate} conteudo={'1'}/>
+                    <ThumbTutorial navigate={navigate} conteudo={'1'}/>
                   </View>
               
               </View>

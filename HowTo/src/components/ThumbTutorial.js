@@ -11,7 +11,7 @@ class ThumbTutorial extends React.Component {
         const {touchble} = styles
         
         return (
-            <TouchableWithoutFeedback onPress={() => this.props.navigate('Cadastro', {id: this.props.conteudo})} >
+            <TouchableWithoutFeedback onPress={() => this.props.navigate('Tutorial', {id: this.props.conteudo})} >
                 <View style={styles.touchble} >
                     <Image source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}} style={styles.image}/>
                     <View style={styles.textView}>
