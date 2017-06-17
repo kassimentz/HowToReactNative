@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
 import { Constants, Facebook } from 'expo';
-import Profile from '../components/Profile';
-import Btn from '../components/Button';
 import InputText from '../components/InputText';
 
 
@@ -30,7 +28,6 @@ export default class Login extends React.Component {
                 <Image source={{uri:'http://d23dyxeqlo5psv.cloudfront.net/cat.gif'}} style={styles.image}/>
 
                 <View style={styles.formWraper}>
-                  <InputText placeholder='Nome'/>
 
                   <InputText placeholder='Email'/>
 
