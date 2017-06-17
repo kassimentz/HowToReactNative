@@ -27,13 +27,14 @@ handleLogin = () => {
           
                 <View style={styles.formWraper}>
                     <Video 
-                        style={styles.video}
                         source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
                         rate={1.0}
                         volume={1.0}
                         muted={false}
                         resizeMode="cover"
                         repeat
+                        shouldPlay
+                        style={styles.video}
                         />
                     <View style={styles.passoWrapper}>
 
