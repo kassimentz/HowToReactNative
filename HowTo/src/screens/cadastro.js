@@ -6,12 +6,13 @@ import InputText from '../components/InputText';
 export default class Cadastro extends React.Component {
 
     render() {
+      console.log(this.props);
     return (
         <View style={styles.container}>
             <View style={styles.body}>
           
                 <View style={styles.formWraper}>
-                  <InputText placeholder='Nome'/>
+                  <InputText placeholder={`${this.props.navigation.state.params.id}`}/>
 
                   <InputText placeholder='Email'/>
 

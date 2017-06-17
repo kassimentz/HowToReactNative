@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Alert, Text, View, Button, Image, Dimensions } from 'react-native';
+import { StyleSheet, Alert, Text, View, Button, Image, Dimensions, ScrollView } from 'react-native';
 import { Constants, Video} from 'expo';
-
+import ThumbTutorial from '../components/ThumbTutorial';
 import Search from '../components/Search';
 import { EvilIcons } from '@expo/vector-icons';
 
@@ -34,14 +34,23 @@ handleLogin = () => {
     const { navigate } = this.props.navigation;
     return (
         <View style={styles.container}>
-            <View style={styles.body}>
-          
-                <View style={styles.formWraper}>
-                    <Search placeholder='Pesquisa'/>  
-                    <Button title="Ver Passo" onPress={() => navigate('Cadastro')} />
-                </View>            
+          <ScrollView>
+              <View style={styles.body}>
+            
+                  <View style={styles.formWraper}>
+                      <Search placeholder='Pesquisa'/>  
+                      {/*<Button title="Ver Passo" onPress={() => navigate('Cadastro')} />*/}
+                  </View>  
 
-            </View>
+                  <View style={styles.line}>
+                    <ThumbTutorial navigate={navigate} conteudo={'1'}/>
+                    <ThumbTutorial/>
+                    <ThumbTutorial/>
+                    <ThumbTutorial/>
+                  </View>
+              
+              </View>
+            </ScrollView>
         </View>
       
     );
@@ -53,8 +62,10 @@ handleLogin = () => {
 const styles = StyleSheet.create({
 
   container: {
-    flex:1,
-    paddingHorizontal: 20,
+    flex: 1,
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    
   },
   body: {
     marginTop: 40,
@@ -68,6 +79,22 @@ const styles = StyleSheet.create({
     margin: 40,
 
   },
+
+  line: {
+    flex: 1,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    marginBottom: 10,
+    alignSelf: 'stretch',
+    padding: 10,
+    flexWrap: 'wrap',
+  },
+  
+  col: {
+    flex: 1,
+    
+  },  
+
 video: {
     height: 9/16*deviceWidth,
     width: deviceWidth,
@@ -99,20 +126,6 @@ video: {
     borderRadius: 5,
     padding: 10,
     alignSelf: 'center',
-  },
-  texto: {
-    fontSize: 18,
-    textAlign: 'justify',
-    marginBottom: 30,
-    width: 0.8*deviceWidth,
-    
-  },
-
-  title: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
-
   },
 
 
