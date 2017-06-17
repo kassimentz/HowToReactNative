@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import { Constants, Facebook } from 'expo';
 import Login from './src/screens/login';
 import Cadastro from './src/screens/cadastro';
@@ -9,18 +10,18 @@ import PassoDetalhe from './src/screens/passoDetalhe';
 import ListaTutoriais from './src/screens/listaTutoriais';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
 
 
   render() {
     return (
       <View style={styles.container}>
-        {/*<Login/>*/}
+        <Login/>
         {/*<Cadastro/>*/}
         {/*<EsqueciSenha/>*/}
         {/*<NovoPasso/>*/}
         {/*<PassoDetalhe/>*/}
-        <ListaTutoriais/>
+        {/*<ListaTutoriais/>*/}
            
       </View>
       
@@ -32,7 +33,11 @@ export default class App extends React.Component {
   }
 }
 
+const app = StackNavigator({
+  Login: { screen: Login },
+});
 
+export default app;
 
 const styles = StyleSheet.create({
 
