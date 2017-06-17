@@ -1,11 +1,8 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image, Dimensions } from 'react-native';
 import { Constants, Video} from 'expo';
-import { StackNavigator } from 'react-navigation';
-import { TabNavigator } from "react-navigation";
+
 import Search from '../components/Search';
-import NovoPasso from './novoPasso';
-import Login from './login';
 import { EvilIcons } from '@expo/vector-icons';
 
 const deviceWidth = Dimensions.get("window").width;
@@ -39,7 +36,7 @@ handleLogin = () => {
           
                 <View style={styles.formWraper}>
                     <Search placeholder='Pesquisa'/>  
-                    <Button title="Ver Passo" onPress={() => navigate('Passo')} />
+                    <Button title="Ver Passo" onPress={() => navigate('PassoDetalhe')} />
                 </View>            
 
             </View>
