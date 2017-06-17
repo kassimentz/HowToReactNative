@@ -7,6 +7,8 @@ import { EvilIcons } from '@expo/vector-icons';
 
 const deviceWidth = Dimensions.get("window").width;
 
+
+
 export default class ListaTutoriais extends React.Component {
 
 static navigationOptions = {
@@ -36,7 +38,7 @@ handleLogin = () => {
           
                 <View style={styles.formWraper}>
                     <Search placeholder='Pesquisa'/>  
-                    <Button title="Ver Passo" onPress={() => navigate('PassoDetalhe')} />
+                    <Button title="Ver Passo" onPress={() => navigate('Cadastro')} />
                 </View>            
 
             </View>

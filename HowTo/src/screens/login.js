@@ -1,10 +1,18 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
 import { Constants, Facebook } from 'expo';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, NavigationActions } from 'react-navigation';
 import InputText from '../components/InputText';
 import { TabNavigator } from "react-navigation";
 
+const resetAction = NavigationActions.reset({
+  index: 0,
+  actions: [
+    NavigationActions.navigate({
+      routeName: 'Tutoriais',
+    })
+  ]
+});
 
 export default class Login extends React.Component {
 
@@ -27,7 +35,7 @@ export default class Login extends React.Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const { dispatch } = this.props.navigation;
     return (
         <View style={styles.container}>
             <View style={styles.body}>
@@ -41,7 +49,7 @@ export default class Login extends React.Component {
                   <InputText placeholder='Senha'/>
                 </View>
 
-                <Button title="Login" onPress={() => navigate('Tutoriais')} />
+                <Button title="Login" onPress={() => dispatch(resetAction)} />
 
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>

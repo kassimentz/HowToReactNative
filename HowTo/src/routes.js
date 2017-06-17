@@ -4,6 +4,7 @@ import { EvilIcons } from '@expo/vector-icons';
 import Login from './screens/login';
 import NovoPasso from './screens/novoPasso';
 import PassoDetalhe from './screens/passoDetalhe';
+import Cadastro from './screens/cadastro';
 import ListaTutoriais from './screens/listaTutoriais';
 
 const Tabs = TabNavigator({
@@ -33,4 +34,5 @@ const Tabs = TabNavigator({
 export default StackNavigator({
   Login: { screen: Login },
   Tutoriais: { screen: Tabs },
+  Cadastro: { screen: Cadastro },
 });
