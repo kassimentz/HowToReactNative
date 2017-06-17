@@ -6,6 +6,10 @@ const deviceWidth = Dimensions.get("window").width;
 
 export default class DetalhePasso extends React.Component {
 
+static navigationOptions = {
+    title: 'Passo',
+  };
+
 handleLogin = () => {
     Alert.alert (
       'Login feito!',

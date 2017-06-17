@@ -35,6 +35,8 @@ class App extends React.Component {
 
 const app = StackNavigator({
   Login: { screen: Login },
+  Tutoriais: { screen: ListaTutoriais },
+  Passo: { screen: PassoDetalhe },
 });
 
 export default app;

@@ -26,6 +26,7 @@ export default class Login extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
         <View style={styles.container}>
             <View style={styles.body}>
@@ -38,6 +39,8 @@ export default class Login extends React.Component {
 
                   <InputText placeholder='Senha'/>
                 </View>
+
+                <Button title="Login" onPress={() => navigate('Tutoriais')} />
 
                 <View style={styles.btnFacebook}>
                     <Text style={styles.title}>Login com Facebook</Text>
