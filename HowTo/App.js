@@ -5,6 +5,7 @@ import Login from './src/screens/login';
 import Cadastro from './src/screens/cadastro';
 import EsqueciSenha from './src/screens/esqueciSenha';
 import NovoPasso from './src/screens/novoPasso';
+import PassoDetalhe from './src/screens/passoDetalhe';
 
 
 export default class App extends React.Component {
@@ -16,7 +17,8 @@ export default class App extends React.Component {
         {/*<Login/>*/}
         {/*<Cadastro/>*/}
         {/*<EsqueciSenha/>*/}
-        <NovoPasso/>
+        {/*<NovoPasso/>*/}
+        <PassoDetalhe/>
            
       </View>
       
