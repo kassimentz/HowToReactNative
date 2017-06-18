@@ -14,6 +14,24 @@ const resetAction = NavigationActions.reset({
   ]
 });
 
+const password = NavigationActions.reset({
+  index: 0,
+  actions: [
+    NavigationActions.navigate({
+      routeName: 'NovaSenha',
+    })
+  ]
+});
+
+const cadastro = NavigationActions.reset({
+  index: 0,
+  actions: [
+    NavigationActions.navigate({
+      routeName: 'Cadastro',
+    })
+  ]
+});
+
 export default class Login extends React.Component {
 
   static navigationOptions = {
@@ -64,8 +82,9 @@ export default class Login extends React.Component {
 
             <View style={styles.footer}>
                 
-                <Button title="Não sou Cadastrado" onPress={this._handleButtonPress} />
-                <Button title="Esqueci Senha" onPress={this._handleButtonPress} />
+                <Text style={styles.btnTextBottom}  onPress={() => dispatch(cadastro)}>Não sou Cadastrado</Text>
+                <Text style={styles.btnTextBottom}  onPress={() => dispatch(password)}>Esqueci Senha</Text>
+
             
             </View> 
         </View>
@@ -105,6 +124,12 @@ const styles = StyleSheet.create({
     padding: 10,
     alignSelf: 'center',
 
+  },
+
+  btnTextBottom:{
+    color: 'blue',
+    fontSize: 16,
+    padding: 10,
   },
 
   btnFacebook: {

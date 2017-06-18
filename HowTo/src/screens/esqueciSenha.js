@@ -5,6 +5,10 @@ import InputText from '../components/InputText';
 
 export default class EsqueciSenha extends React.Component {
 
+  static navigationOptions = {
+    title: 'Envio de Senha',
+  };
+
     render() {
     return (
         <View style={styles.container}>

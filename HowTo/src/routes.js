@@ -7,6 +7,7 @@ import PassoDetalhe from './screens/passoDetalhe';
 import Cadastro from './screens/cadastro';
 import ListaTutoriais from './screens/listaTutoriais';
 import TutorialDetalhe from './screens/tutorialDetalhe';
+import EsqueciSenha from './screens/esqueciSenha';
 
 const Tabs = TabNavigator({
   Tutoriais: {
@@ -37,4 +38,6 @@ export default StackNavigator({
   Tutoriais: { screen: Tabs },
   Cadastro: { screen: Cadastro },
   Tutorial: { screen: TutorialDetalhe },
+  NovaSenha: { screen: EsqueciSenha },
+
 });

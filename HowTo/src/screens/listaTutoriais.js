@@ -7,8 +7,6 @@ import { EvilIcons } from '@expo/vector-icons';
 
 const deviceWidth = Dimensions.get("window").width;
 
-
-
 export default class ListaTutoriais extends React.Component {
 
 static navigationOptions = {

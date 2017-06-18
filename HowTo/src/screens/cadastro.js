@@ -5,6 +5,10 @@ import InputText from '../components/InputText';
 
 export default class Cadastro extends React.Component {
 
+  static navigationOptions = {
+    title: 'Cadastro',
+  };
+
     render() {
       console.log(this.props);
     return (
@@ -12,7 +16,8 @@ export default class Cadastro extends React.Component {
             <View style={styles.body}>
           
                 <View style={styles.formWraper}>
-                  <InputText placeholder={`${this.props.navigation.state.params.id}`}/>
+                  {/*<InputText placeholder={`${this.props.navigation.state.params.id}`}/> para pegar um valor enviado junto da navegacao*/}
+                  <InputText placeholder='Nome'/>
 
                   <InputText placeholder='Email'/>
 

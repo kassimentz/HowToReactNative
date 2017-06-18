@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Alert, Text, View, Button, Image, Dimensions } from 'react-native';
 import { Constants, Video} from 'expo';
 import MultilineText from '../components/MultilineText';
 import { TabNavigator } from "react-navigation";
 
+const deviceWidth = Dimensions.get("window").width;
+
 export default class NovoPasso extends React.Component {
 
 static navigationOptions = {
-    title: 'NovoPasso',
+    title: 'Novo Passo',
   };
 
     render() {
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
   },
   body: {
     marginTop: 40,
-    marginBottom: 40,
+    marginBottom: 60,
     flex:1,
     justifyContent: 'center',
   },
@@ -78,6 +80,7 @@ video: {
     flexDirection: 'row',
     alignSelf: 'stretch',
     justifyContent: 'space-around',
+    paddingBottom: deviceWidth*0.2,
   },
 
   btn: {

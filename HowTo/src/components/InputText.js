@@ -12,6 +12,7 @@ class InputText extends React.Component {
         return (
             <View style={inputText}>
                 <TextInput
+                underlineColorAndroid='transparent'
                 placeholder={placeholder}
                 style={removeBorder}
                 onChangeText={(text) => this.setState({text})}

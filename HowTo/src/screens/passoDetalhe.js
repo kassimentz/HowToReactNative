@@ -37,7 +37,7 @@ handleLogin = () => {
                         muted={false}
                         resizeMode="cover"
                         repeat
-                        shouldPlay
+                        //shouldPlay
                         style={styles.video}
                         />
                     <View style={styles.passoWrapper}>
