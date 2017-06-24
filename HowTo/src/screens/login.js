@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Alert, Text, View, Button, Image, Dimensions } from 'react-native';
 import { Constants, Facebook } from 'expo';
 import { StackNavigator, NavigationActions } from 'react-navigation';
 import InputText from '../components/InputText';
 import { TabNavigator } from "react-navigation";
+
+const deviceWidth = Dimensions.get("window").width;
+const deviceheight = Dimensions.get("window").height;
 
 const resetAction = NavigationActions.reset({
   index: 0,
@@ -99,37 +102,42 @@ const styles = StyleSheet.create({
     flex:1,
   },
   body: {
-    marginTop: 40,
-    marginBottom: 40,
+    marginTop: 0.1*deviceheight,
+    marginBottom: 0.1*deviceheight,
     flex:1,
   },
  
   image: {
     height: 200,
     width: 200,
-    marginBottom: 30,
+    marginBottom: 10,
+    marginTop: 5,
     alignSelf: 'center',
     
   },
 
   formWraper: {
-    margin: 20,
+    marginBottom: 10,
+    marginTop: 10,
+    marginLeft: 20,
+    marginRight: 20,
 
   },
 
   btnText: {
     color: 'blue',
-    fontSize: 16,
+    fontSize: 14,
     alignItems: 'center',
-    padding: 10,
+    padding: 5,
     alignSelf: 'center',
 
   },
 
   btnTextBottom:{
     color: 'blue',
-    fontSize: 16,
-    padding: 10,
+    fontSize: 14,
+    padding: 5,
+    marginTop: 5,
   },
 
   btnFacebook: {
@@ -137,9 +145,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#2A49A5',
     marginBottom: 7,
     width: 300,
-    height: 50,
+    height: 40,
     borderRadius: 5,
-    padding: 10,
+    padding: 8,
     alignSelf: 'center',
   },
 
@@ -148,15 +156,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#EA4335',
     marginBottom: 7,
     width: 300,
-    height: 50,
+    height: 40,
     borderRadius: 5,
-    padding: 10,
+    padding: 8,
     alignSelf: 'center',
   },
 
   title: {
     color: '#fff',
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: 'bold',
 
   },
