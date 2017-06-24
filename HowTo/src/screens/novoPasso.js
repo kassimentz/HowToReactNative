@@ -17,7 +17,7 @@ static navigationOptions = {
         <View style={styles.container}>
             <View style={styles.body}>
           
-                <View style={styles.formWraper}>
+                <View>
                     {/*trocar por video*/}
                     {/*<Image source={{uri:'https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif'}} style={styles.image}/>*/}
                     <Video 
@@ -33,8 +33,9 @@ static navigationOptions = {
                     <MultilineText/>
 
                 </View>
+            </View>
 
-                <View style={styles.buttons}>
+            <View style={styles.buttons}>
                     <View style={styles.btn}>
                         <Text style={styles.title}>Salvar</Text>
                     </View>
@@ -43,8 +44,6 @@ static navigationOptions = {
                         <Text style={styles.title}>Cancelar</Text>
                     </View>
                 </View>
-
-            </View>
         </View>
       
     );
@@ -58,29 +57,23 @@ const styles = StyleSheet.create({
     flex:1,
   },
   body: {
-    marginTop: 40,
-    marginBottom: 60,
     flex:1,
-    justifyContent: 'center',
+    marginLeft: 10,
+    marginRight: 10,
   },
- 
-  formWraper: {
-    margin: 40,
-
-  },
-video: {
-    height: 300,
-    width: 300,
+  video: {
+    height: 9/16*deviceWidth,
+    width: deviceWidth,
     marginBottom: 30,
     alignSelf: 'center',
-    
   },
 
   buttons: {
-    flexDirection: 'row',
     alignSelf: 'stretch',
+    alignItems: 'baseline',
     justifyContent: 'space-around',
-    paddingBottom: deviceWidth*0.2,
+    flexDirection:'row',
+    marginBottom: 5,
   },
 
   btn: {
@@ -96,16 +89,10 @@ video: {
   texto: {
     fontSize: 18,
     textAlign: 'left',
-    marginBottom: 30,
-    
   },
-
   title: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
-
   },
-
-
 });
