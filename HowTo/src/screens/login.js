@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     flex:1,
   },
   body: {
-    marginTop: 0.1*deviceheight,
+    // marginTop: 0.1*deviceheight,
     marginBottom: 0.1*deviceheight,
     flex:1,
   },
@@ -111,8 +111,9 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     marginBottom: 10,
-    marginTop: 5,
-    alignSelf: 'center',
+    marginTop: 10,
+    alignSelf: 'center', 
+    
     
   },
 
@@ -173,6 +174,7 @@ const styles = StyleSheet.create({
    alignItems: 'baseline',
    justifyContent: 'space-between',
    flexDirection:'row',
+   
  },
 
 });
