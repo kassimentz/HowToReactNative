@@ -1,9 +1,9 @@
 import React from 'react';
-import App from './App';
+import App from '../Search';
 
 import renderer from 'react-test-renderer';
 
-it('fazer novamente', () => {
-  const tree = renderer.create(<App />).toJSON();
+it('Snapshot Search', () => {
+  const tree = renderer.create(<Search/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
