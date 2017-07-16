@@ -52,7 +52,6 @@ export default class Cadastro extends React.Component {
           'Por favor, digite a mesma senha nos dois campos'
         );
       } else if (name && email && password1) {
-        console.log("sdsdsd");
         this.props.navigation.dispatch(this.goToTutorials);
       }
     }
