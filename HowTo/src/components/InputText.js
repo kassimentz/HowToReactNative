@@ -3,19 +3,17 @@ import {View, Text, Button, StyleSheet, TextInput} from 'react-native';
 
 class InputText extends React.Component {
 
-    state = {
-        text: ""
-    }
     render() {
-        const {placeholder} = this.props
+        const {placeholder, value, onChangeText} = this.props
         const {inputText, removeBorder} = styles
         return (
             <View style={inputText}>
                 <TextInput
-                underlineColorAndroid='transparent'
-                placeholder={placeholder}
-                style={removeBorder}
-                onChangeText={(text) => this.setState({text})}
+                    underlineColorAndroid='transparent'
+                    placeholder={placeholder}
+                    value={value}
+                    style={removeBorder}
+                    onChangeText={onChangeText}
                 />
             </View>
         )

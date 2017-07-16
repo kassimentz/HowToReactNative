@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image, Dimensions } from 'react-native';
 import { Constants, Facebook } from 'expo';
-import { StackNavigator, NavigationActions } from 'react-navigation';
 import InputText from '../components/InputText';
-import { TabNavigator } from "react-navigation";
+import { StackNavigator, NavigationActions, TabNavigator } from "react-navigation";
 
 const deviceWidth = Dimensions.get("window").width;
 const deviceheight = Dimensions.get("window").height;
@@ -40,21 +39,6 @@ export default class Login extends React.Component {
   static navigationOptions = {
     title: 'Login',
   };
-
-    handleLogin = () => {
-    Alert.alert (
-      'Login feito!',
-      'Uhu!'
-    );
-  }
-
-  _handleButtonPress = () => {
-   Alert.alert(
-     'Button pressed!',
-     'You did it!',
-   );
-  }
-
 
   render() {
     const { dispatch } = this.props.navigation;
