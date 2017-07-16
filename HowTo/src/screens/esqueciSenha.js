@@ -2,26 +2,56 @@ import React from 'react';
 import { StyleSheet, Alert, Text, View, Button, Image } from 'react-native';
 import { Constants, Facebook } from 'expo';
 import InputText from '../components/InputText';
+import { StackNavigator, NavigationActions, TabNavigator } from "react-navigation";
 
 export default class EsqueciSenha extends React.Component {
+
+  state = {
+    email: ''
+  };
 
   static navigationOptions = {
     title: 'Envio de Senha',
   };
 
-    render() {
+  goToLogin = NavigationActions.reset({
+  index: 0,
+  actions: [
+      NavigationActions.navigate({
+        routeName: 'Login',
+      })
+    ]
+  });
+
+  render() {
+
+    sendEmail = () => {
+
+      let email = this.state.email;
+
+      if (email) {
+        Alert.alert (
+          'E-mail enviado com sucesso!',
+        );
+      }
+
+      this.props.navigation.dispatch(this.goToLogin);
+    }
+
+    const { dispatch } = this.props.navigation;
+
     return (
         <View style={styles.container}>
             <View style={styles.body}>
           
                 <View style={styles.formWraper}>
                     <Text style={styles.texto}>Informe seu email que lhe enviaremos sua senha.</Text>
-                    <InputText placeholder='Email'/>
+                    <InputText placeholder='Email' onChangeText={(value) => this.setState({email: value})}/>
                 </View>
 
                 <View style={styles.buttons}>
                     <View style={styles.btnEnvia}>
-                        <Text style={styles.title}>Enviar</Text>
+                        <Text style={styles.title} onPress={() => sendEmail()}>Enviar</Text>
                     </View>
                 </View>
 
