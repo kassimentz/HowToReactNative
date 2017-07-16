@@ -9,7 +9,7 @@ static navigationOptions = {
     title: 'Tutorial',
   };
 
-    render() {
+    render() { 
     return (
         <View style={styles.container}>
             <View style={styles.body}>
@@ -20,14 +20,23 @@ static navigationOptions = {
                         <Image style={styles.fotoUser} source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/cat.gif' }} />
                      </View>
                     <Text style={styles.titleTutorial}>Receita de como fazer pão de queijo </Text>
-                    <Text style={styles.descTutorial}> bla bla bla bla</Text>
-                    
+                    <Text style={styles.descTutorial}> Lorem ipsum dolor sit amet, ultricies mauris, lectus wisi. Proin donec. 
+                      Elit scelerisque metus, sit nascetur. 
+                  </Text>
                     
                 </View>
 
                 <View style={styles.listaPassos}>
-                   
+                   <Image style={styles.fotoPasso} source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/cat.gif' }} />
+                   <Text style={styles.textPassos}>Passo 1: Nunc eros faucibus. Erat vestibulum orci, dis semper augue. Metus viverra, sodales turpis fusce. </Text>
                 </View>
+
+                <View style={styles.listaPassos}>
+                   <Image style={styles.fotoPasso} source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/cat.gif' }} />
+                   <Text style={styles.textPassos}>Passo 2: orem ipsum dolor sit amet, ultricies mauris, lectus wisi. Proin donec. 
+                      Elit scelerisque metus, sit nascetur. </Text>
+                </View>
+
 
             </View>
         </View>
@@ -44,15 +53,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   body: {
-    marginTop: 40,
+    marginTop: 1,
     marginBottom: 40,
     flex:1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   headerTutorial: {
-    flex: 2,
-    backgroundColor: '#00ff00',
+    flex:1
   },
   imgPrincipal: {
     height: 9/16*deviceWidth,
@@ -70,16 +78,26 @@ viewFotoUser:{
     margin:5,
 },
   titleTutorial: {
-    fontSize: 20,
+    fontSize: 16,
   },
   descTutorial: {
-    fontSize:10,
+    fontSize:12,
   },
  listaPassos: {
-    flex: 1,
-    backgroundColor: '#ff0000',
+
+    flexDirection: 'row',
     width: deviceWidth,
+    marginTop: 2,
+    marginBottom: 2,
   },
   
-
+  fotoPasso: {
+    width:70,
+    height:70,
+    
+  },
+  textPassos:{
+    fontSize:11,
+    width:250,
+  }
 });
